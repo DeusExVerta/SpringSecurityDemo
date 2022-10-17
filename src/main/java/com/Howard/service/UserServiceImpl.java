@@ -13,17 +13,14 @@ import com.Howard.entity.User;
 import com.Howard.repository.*;
 
 import lombok.AllArgsConstructor;
-import lombok.NonNull;
-
-import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
-@AllArgsConstructor(onConstructor=@__(@Autowired))
+@AllArgsConstructor
 public class UserServiceImpl implements UserService{
 	
-	private @NonNull UserRepository userRepository;
-    private @NonNull RoleRepository roleRepository;
-    private @NonNull PasswordEncoder passwordEncoder;
+	private UserRepository userRepository;
+    private RoleRepository roleRepository;
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public void saveUser(UserDTO userDto) {

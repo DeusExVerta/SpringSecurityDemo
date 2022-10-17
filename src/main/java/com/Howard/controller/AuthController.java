@@ -8,8 +8,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.Howard.dto.UserDTO;
 import com.Howard.entity.User;
 import com.Howard.service.UserService;
@@ -19,7 +17,7 @@ import lombok.AllArgsConstructor;
 
 
 @Controller
-@AllArgsConstructor(onConstructor=@__(@Autowired))
+@AllArgsConstructor
 public class AuthController {
 
 	private UserService userService;
